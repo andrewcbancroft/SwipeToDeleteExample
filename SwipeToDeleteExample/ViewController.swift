@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let alert = UIAlertController(title: "Delete Planet", message: "Are you sure you want to permanently delete \(planet)?", preferredStyle: .ActionSheet)
         
         let DeleteAction = UIAlertAction(title: "Delete", style: .Destructive, handler: handleDeletePlanet)
-        let CancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: cancelDeletePlanet)
+        let CancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: cancelDeletePlanet)
         
         alert.addAction(DeleteAction)
         alert.addAction(CancelAction)
