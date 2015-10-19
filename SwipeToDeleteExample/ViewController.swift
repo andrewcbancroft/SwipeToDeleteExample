@@ -51,20 +51,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addAction(DeleteAction)
         alert.addAction(CancelAction)
         
+        // Support presentation in iPad
         alert.popoverPresentationController?.sourceView = self.view
         alert.popoverPresentationController?.sourceRect = CGRectMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0, 1.0, 1.0)
         
         self.presentViewController(alert, animated: true, completion: nil)
-        
-        /*
-        [alertController setModalPresentationStyle:UIModalPresentationPopover];
-        
-        UIPopoverPresentationController *popPresenter = [alertController
-        popoverPresentationController];
-        popPresenter.sourceView = button;
-        popPresenter.sourceRect = button.bounds;
-        [self presentViewController:alertController animated:YES completion:nil];
-        */
     }
     
     func handleDeletePlanet(alertAction: UIAlertAction!) -> Void {
